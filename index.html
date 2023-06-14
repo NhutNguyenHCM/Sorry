@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Say Sorry</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <audio id="autoplay" autoplay loop controls>
+      <source src="./y2mate (mp3cut.net).mp3">
+    </audio>
+    <main>
+      <div id="env">
+        <svg
+          width="200%"
+          preserveAspectRatio="none"
+          height="150%"
+          viewBox="0 0 300 300"
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+          class="env"
+        >
+          <desc>Envelope</desc>
+
+          <!---<rect x="10" y="80" width="280" height="180" fill="#FFF" class="env_letter"/>--->
+
+          <polygon
+            fill="#f7f7f7"
+            points="1, 100 1, 100 150, 0 300, 100 300, 100"
+            class="env__fold-inside"
+            transform="translate(101,0) rotate(180, 100, 100)"
+          />
+          <svg x="0" y="0" id="env-flip">
+            <polygon
+              fill="#f7f7f7"
+              points="1, 120 1, 100 150, 0 300, 100 300, 100"
+              class="env__fold-top-up"
+            />
+            <polygon
+              fill="#00"
+              opacity="0.05"
+              points="0, 120 1, 100 150, 0 300, 100 300, 120 150, 20"
+              class="env__fold-top-glue"
+            />
+          </svg>
+          <g x="10" y="100">
+            <rect
+              x="10"
+              y="100"
+              width="280"
+              height="180"
+              fill="#fff"
+              class="env__letter"
+            />
+            <text id="rectResize" y="0" x="10" font-size="16" width="2%">
+              <tspan
+                class="first-line"
+                x="150"
+                y="150"
+                font-size="40"
+                text-anchor="middle"
+              >
+                Đừng
+              </tspan>
+              <tspan
+                class="second-line"
+                x="150"
+                y="190"
+                text-anchor="middle"
+                font-size="40"
+              >
+                giận anh nữa
+              </tspan>
+              <tspan
+                class="third-line"
+                x="150"
+                y="230"
+                font-size="40"
+                text-anchor="middle"
+              >
+                nha!
+              </tspan>
+            </text>
+          </g>
+
+          <polygon
+            fill="#f7f7f7"
+            points="1, 300 1, 280 150, 180 300, 280 300, 300"
+            class="env__fold-bottom"
+          />
+          <polygon
+            fill="#e7e7e7"
+            points="1,102 20,105 150,210 20,300 1 300"
+            class="env__fold-left"
+          />
+          <polygon
+            fill="#e7e7e7"
+            points="300,102 280,105 150,210 280,300 300 300"
+            class="env__fold-right"
+          />
+          <polygon
+            fill="#f7f7f7"
+            points="1, 120 1, 100 150, 0 300, 100 300, 120"
+            class="env__fold-top-down"
+            transform="translate(101,0) rotate(180, 100, 110)"
+          />
+
+          <svg x="40%" y="58%">
+            <path
+              id="heart-icon"
+              d="M16,28.261c0,0-14-7.926-14-17.046c0-9.356,13.159-10.399,14-0.454c1.011-9.938,14-8.903,14,0.454
+    C30,20.335,16,28.261,16,28.261z"
+              transform="scale(2,2)"
+            />
+          </svg>
+        </svg>
+
+        <div id="heart-container">
+          <div class="heart animate-topright"></div>
+          <div class="heart animate-bottomright"></div>
+          <div class="heart animate-topleft"></div>
+          <div class="heart animate-bottomleft"></div>
+          <div class="heart animate-up"></div>
+          <div class="heart animate-down"></div>
+          <div class="heart animate-left"></div>
+          <div class="heart animate-right"></div>
+        </div>
+      </div>
+    </main>
+    <div id="text">
+      <p class="animate__animated animate__fadeInLeftBig">Anh xin lỗi</p>
+      <p class="animate__animated animate__fadeInLeftBig">Hứa sẽ ngoan</p>
+      <p class="animate__animated animate__fadeInLeftBig">Không lý sự nữa</p>
+      <p class="animate__animated animate__fadeInLeftBig">Không chọc em giận</p>
+      <div class="img">
+        <img src="./meme-meo-buon-khoc.jpg" alt="" />
+      </div>
+    
+
+    
+    </div>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3plus/1.9.8/d3plus.js"></script>
+    <script src="./script.js"></script>
+    <script>
+      document.querySelector('audio').play();
+      setTimeout(function () {
+        document
+          .querySelector("p:nth-child(1)")
+          .classList.add("animate__fadeOutDown");
+      }, 1000);
+      setTimeout(function () {
+        document
+          .querySelector("p:nth-child(2)")
+          .classList.add("animate__fadeOutDown");
+      }, 2000);
+      setTimeout(function () {
+        document
+          .querySelector("p:nth-child(3)")
+          .classList.add("animate__fadeOutDown");
+      }, 3000);
+      setTimeout(function () {
+        document
+          .querySelector("p:nth-child(4)")
+          .classList.add("animate__fadeOutDown");
+      }, 4000);
+      setTimeout(function () {
+        document
+          .querySelector(".img img")
+          .setAttribute("style", "visibility:visible");
+      }, 5000);
+
+
+
+    </script>
+  </body>
+</html>
